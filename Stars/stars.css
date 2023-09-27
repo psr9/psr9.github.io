@@ -1,8 +1,3 @@
-/* primary: #2F27CE
-   secondary: #DEDCFF
-   accent: #433BFF
-   background: #FBFBFE
-*/
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Inclusive+Sans&family=Inter&display=swap');
 :root {
     --primary: #2F27CE;
@@ -92,44 +87,34 @@ nav > header > div > button:nth-child(1)::after {
 nav > header > div > button:nth-child(2)::after {
     content: "Stars";
 }
-#intro-card-wrapper {
+
+.star-types {
+    border: 1px solid red;
+    height: 400px;
+    width: 800px;
     height: calc(100vh - 70px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
 }
-#intro-card {
-    width: 900px;
-    height: 300px;
-    font-size: 40px;
-    display: flex;
-    padding: 10px;
-    align-items: center;
-}
-#intro-card-head {
-    font-family: "Inclusive Sans";
-    color: var(--black);
-    width: max-content;
-    margin: 0;
-}
-#intro-card-head > span, #intro-card-body > span {
-    color: var(--accent);
-}
-#intro-card-body, #intro-card-body-2 {
-    font-size: 17px;
-    color: rgb(66, 66, 66);
-}
-#intro-card-text {
-    display: flex;
-    flex-direction: column;
-    width: 550px;
-}
-/* 2560 1600 */
-#img {
+.star-card {
+    transition: .3s ease;
+    aspect-ratio: 1;
+    height: 200px;
+    box-shadow: 2px 4px 10px -5px var(--black);
     border-radius: 10px;
-    width: 256px;
-    height: 160px;
-    margin-left: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+.star-card:hover {
+    transition: .3s ease;
+    scale: 1.1;
+}
+.star-card-name {
+    font-family: "Atkinson Hyperlegible";
+    font-size: 20px;
+}
+.star-card-desc {
+    margin-top: 0;
 }
