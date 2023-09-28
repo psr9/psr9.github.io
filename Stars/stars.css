@@ -15,6 +15,7 @@ body {
     background: var(--background);
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 nav {
     display: flex;
@@ -22,6 +23,11 @@ nav {
     border: none;
     border-bottom: 1px solid var(--secondary);
     height: 70px;
+    position: fixed;
+    width: 100%;
+    margin-top: 0;
+    top: 0;
+    background: var(--background);
 }
 nav > header {
     display: flex;
@@ -31,6 +37,7 @@ nav > header {
 nav > header > p {
     font-family: "Inclusive Sans";
     font-size: 25px;
+    cursor: pointer;
 }
 nav > header > p > span {
     color: var(--accent);
@@ -81,24 +88,33 @@ nav > header > div > button:hover::after {
 }
 
 /* CUSTOM HOVER TIPS FOR NAV BAR BUTTONS */
-nav > header > div > button:nth-child(1)::after {
-    content: "Pulsars";
-}
-nav > header > div > button:nth-child(2)::after {
+
+/* nav > header > div > button:nth-child(1)::after {
     content: "Stars";
-}
+} */
 
 .star-types {
-    border: 1px solid red;
     height: 400px;
     width: 800px;
-    height: calc(100vh - 70px);
+    min-height: calc(100vh);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+    margin-top: 100px;
+}
+.star-card-container {
+    display: flex;
+    width: 965px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
 }
 .star-card {
+    box-shadow: 2px 4px 10px -5px var(--black);
     transition: .3s ease;
     aspect-ratio: 1;
-    height: 200px;
-    box-shadow: 2px 4px 10px -5px var(--black);
+    height: 230px;
     border-radius: 10px;
     text-align: center;
     display: flex;
@@ -106,10 +122,14 @@ nav > header > div > button:nth-child(2)::after {
     flex-direction: column;
     justify-content: center;
     cursor: pointer;
+    background: var(--background);
+    margin: 5px;
+    padding: 15px;
 }
 .star-card:hover {
     transition: .3s ease;
     scale: 1.1;
+    box-shadow: 0px 2px 20px -15px var(--black);
 }
 .star-card-name {
     font-family: "Atkinson Hyperlegible";
@@ -117,4 +137,5 @@ nav > header > div > button:nth-child(2)::after {
 }
 .star-card-desc {
     margin-top: 0;
+    color: rgb(145, 145, 145);
 }

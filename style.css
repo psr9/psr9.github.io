@@ -36,6 +36,7 @@ nav > header {
 nav > header > p {
     font-family: "Inclusive Sans";
     font-size: 25px;
+    cursor: pointer;
 }
 nav > header > p > span {
     color: var(--accent);
@@ -87,9 +88,6 @@ nav > header > div > button:hover::after {
 
 /* CUSTOM HOVER TIPS FOR NAV BAR BUTTONS */
 nav > header > div > button:nth-child(1)::after {
-    content: "Pulsars";
-}
-nav > header > div > button:nth-child(2)::after {
     content: "Stars";
 }
 #intro-card-wrapper {
