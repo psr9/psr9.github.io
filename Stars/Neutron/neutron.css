@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Inclusive+Sans&family=Inter&display=swap');
+:root {
+    --primary: #2F27CE;
+    --secondary: #DEDCFF;
+    --accent: #433BFF;
+    --background: #FBFBFE;
+    --black: #232323;
+}
+* {
+    box-sizing: border-box;
+    font-family: "Inter";
+    color: var(--black);
+}
+body {
+    background: var(--background);
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    border: none;
+    border-bottom: 1px solid var(--secondary);
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    margin-top: 0;
+    top: 0;
+    background: var(--background);
+}
+nav > header {
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+nav > header > p {
+    font-family: "Inclusive Sans";
+    font-size: 25px;
+    cursor: pointer;
+}
+nav > header > p > span {
+    color: var(--accent);
+}
+nav > header > div {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+nav > header > div > button {
+    transition: .3s ease;
+    aspect-ratio: 1;
+    height: 35px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transform: translate(-1px, -1px);
+    box-shadow: 2px 2px 2px #a29dfa;
+    background: var(--background);
+    margin: auto 5px;
+}
+nav > header > div > button:hover {
+    transition: .3s ease;
+    box-shadow: 0px 0px 0px #00000000;
+    transform: translate(0);
+    color: var(--black);
+}
+nav > header > div > button > i {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+nav > header > div > button::after {
+    width: 150px;
+    word-wrap: normal;
+    transition: .2s ease;
+    background: transparent;
+    content: "Default";
+    position: absolute;
+    transform: translate(-50%, -350%);
+    font-family: "Inter";
+    pointer-events: none;
+    text-align: center;
+}
+nav > header > div > button:hover::after {
+    transition: .2s ease;
+    transform: translate(-50%, 150%);
+}
+.neutron-stars {
+    height: 400px;
+    width: 800px;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+    margin-top: 100px;
+}
+.neutron-star-container {
+    display: flex;
+    width: 965px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+}
+.neutron-star-card {
+    box-shadow: 2px 4px 10px -5px var(--black);
+    transition: .3s ease;
+    aspect-ratio: 1;
+    height: 230px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    background: var(--background);
+    margin: 5px;
+    padding: 15px;
+}
+.neutron-star-card:hover {
+    transition: .3s ease;
+    scale: 1.1;
+    box-shadow: 0px 2px 20px -15px var(--black);
+}
+.neutron-star-card-name {
+    font-family: "Atkinson Hyperlegible";
+    font-size: 20px;
+}
